@@ -1,6 +1,6 @@
 services:
   mysql:
-    image: mysql:1.2
+    image: mysql:8.0
     build:
       context: .
       dockerfile: Dockerfile.mysql
@@ -21,7 +21,6 @@ services:
       retries: 10
 
   django_app:
-    image: python:3.8
     environment:
       - PYTHONUNBUFFERED=1
     build:
